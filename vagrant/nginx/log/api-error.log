@@ -1,0 +1,64 @@
+2020/04/16 07:36:03 [error] 7555#7555: *13 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET /google-api HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:37:08 [error] 7555#7555: *15 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:37:10 [error] 7555#7555: *17 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:37:11 [error] 7555#7555: *19 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:40:03 [error] 7555#7555: *21 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:40:26 [error] 7555#7555: *21 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:40:31 [error] 7555#7555: *21 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:41:01 [error] 7555#7555: *21 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:41:43 [error] 7861#7861: *1 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:44:29 [error] 7861#7861: *3 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:45:01 [error] 7861#7861: *5 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 07:47:59 [error] 7861#7861: *7 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /app/vendor/composer/autoload_real.php on line 71" while reading response header from upstream, client: 192.168.83.1, server: api.project.com, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 15:18:55 [error] 8363#8363: *185 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/common/services/GoogleCalendarService.php on line 142. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/common/services/GoogleCalendarService.php on line 142. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Respons" while reading upstream, client: 192.168.83.1, server: api.project.com, request: "GET /google-api/view?id=1&eventId=55bapcoechtifadrjb9hd63g9s HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 15:20:12 [error] 8363#8363: *189 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/api/controllers/GoogleApiController.php on line 84. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/api/controllers/GoogleApiController.php on line 84. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->sen" while reading upstream, client: 192.168.83.1, server: api.project.com, request: "GET /google-api/view?id=1&eventId=55bapcoechtifadrjb9hd63g9s HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 15:20:41 [error] 8363#8363: *189 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/api/controllers/GoogleApiController.php on line 84. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/api/controllers/GoogleApiController.php on line 84. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->sen" while reading upstream, client: 192.168.83.1, server: api.project.com, request: "GET /google-api/view?id=1&eventId=55bapcoechtifadrjb9hd63g9s HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
+2020/04/16 15:21:31 [error] 8363#8363: *189 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/api/controllers/GoogleApiController.php on line 84. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/api/controllers/GoogleApiController.php on line 84. in /app/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->sen" while reading upstream, client: 192.168.83.1, server: api.project.com, request: "GET /google-api/view?id=1&eventId=55bapcoechtifadrjb9hd63g9s HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.1-fpm.sock:", host: "api.project.com"
