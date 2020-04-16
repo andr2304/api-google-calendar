@@ -5,17 +5,43 @@ namespace api\controllers;
 
 
 use common\services\GoogleCalendarService;
+use yii\filters\AccessControl;
+use yii\filters\auth\HttpBasicAuth;
+use yii\filters\auth\HttpBearerAuth;
 use yii\rest\Controller;
 use yii\web\BadRequestHttpException;
 
 class GoogleApiController extends Controller
 {
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+
+        $behaviors['authenticator']['authMethods'] = [
+            HttpBasicAuth::className(),
+            HttpBearerAuth::className(),
+        ];
+
+        $behaviors['access'] = [
+            'class' => AccessControl::className(),
+            'rules' => [
+                [
+                    'allow' => true,
+                    'roles' => ['@'],
+                ],
+            ],
+        ];
+
+        return $behaviors;
+    }
 
     public function actionCreateEvent()
     {
+        $userId = $this->getUser();
+
         $params = \Yii::$app->request->post();
 
-        $googleApi = new GoogleCalendarService($params['id']);
+        $googleApi = new GoogleCalendarService($userId);
 
         try{
             $event = $googleApi->createDataForCalendarEvent($params);
@@ -26,15 +52,18 @@ class GoogleApiController extends Controller
 
         return [
             'code' => 1,
+            'userId' => $userId,
             'eventId'=> $calEvent->getId()
         ];
 
     }
 
 
-    public function actionDeleteEvent($id, $eventId)
+    public function actionDeleteEvent($eventId)
     {
-        $googleApi = new GoogleCalendarService($id);
+        $userId = $this->getUser();
+
+        $googleApi = new GoogleCalendarService($userId);
 
         try{
             $googleApi->deleteGoogleCalendarEvent($eventId);
@@ -43,13 +72,16 @@ class GoogleApiController extends Controller
         }
         return [
             'code' => 1,
+            'userId' => $userId,
             'message'=> "Event deleted"
         ];
     }
 
-    public function actionGetEvent($id, $eventId)
+    public function actionGetEvent($eventId)
     {
-        $googleApi = new GoogleCalendarService($id);
+        $userId = $this->getUser();
+
+        $googleApi = new GoogleCalendarService($userId);
 
         try{
             $event = $googleApi->getGoogleCalendarEvent($eventId);
@@ -59,7 +91,8 @@ class GoogleApiController extends Controller
 
         return [
             'code' => 1,
-            'id' => $event->id,
+            'userId' => $userId,
+            'eventId' => $event->id,
             'summary'=> $event->summary,
             'location' => $event->location,
             'description' => $event->description,
@@ -69,9 +102,11 @@ class GoogleApiController extends Controller
 
     }
 
-    public function actionCalendarsList($id)
+    public function actionCalendarsList()
     {
-        $googleApi = new GoogleCalendarService($id);
+        $userId = $this->getUser();
+
+        $googleApi = new GoogleCalendarService($userId);
 
         try{
             $calendars = $googleApi->calendarList();
@@ -81,8 +116,14 @@ class GoogleApiController extends Controller
 
         return [
             'code' => 1,
+            'userId' => $userId,
             'calendars'=> $calendars
         ];
 
+    }
+
+    private function getUser()
+    {
+        return \Yii::$app->user->getId();
     }
 }

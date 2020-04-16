@@ -71,11 +71,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        return static::find()
-            ->joinWith('tokens t')
-            ->andWhere(['t.token' => $token])
-            ->andWhere(['>', 't.expired_at', time()])
-            ->one();
+        return static::find()->where([
+            'auth_key' => $token,
+            'status' => self::STATUS_ACTIVE
+        ])->one();
     }
 
     /**
