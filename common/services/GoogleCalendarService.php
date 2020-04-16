@@ -6,6 +6,7 @@ namespace common\services;
 use Google_Client;
 use Google_Service_Calendar;
 use Google_Service_Calendar_Event;
+use yii\base\Application;
 use yii\helpers\Url;
 use Google_Service_Exception;
 use yii\web\BadRequestHttpException;
@@ -41,7 +42,7 @@ class GoogleCalendarService
      */
     public function generateGoogleApiAccessToken(){
 
-        if ($this->checkIfCredentialFileExists()) {
+        if ($this->checkIfCredentialFileExists($generateToken = true)) {
             $accessToken = json_decode(file_get_contents($this->credentialsPath), true);
         } else {
             // Request authorization from the user.
@@ -223,9 +224,12 @@ class GoogleCalendarService
     }
 
 
-    public function checkIfCredentialFileExists()
+    public function checkIfCredentialFileExists($generateToken = false)
     {
         if (!file_exists($this->credentialsPath) ) {
+            if($generateToken){
+                return false;
+            }
             throw new BadRequestHttpException('Юзер не пройшов привязку', 400);
         }
 

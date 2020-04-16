@@ -33,9 +33,7 @@ class AuthGoogleController extends Controller
 
         $googleApi = new GoogleCalendarService($user_id);
 
-        if(!$googleApi->checkIfCredentialFileExists()) {
-            $googleApi->generateGoogleApiAccessToken();
-        }
+        $googleApi->generateGoogleApiAccessToken();
 
         return $this->render('auth');
     }
